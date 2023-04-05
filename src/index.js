@@ -18,6 +18,6 @@ mongoose.connect('mongodb+srv://sumit:sumit@cluster0.8dflsuw.mongodb.net/tic_toc
 
 app.use('/', route)
 
-const port = 4000;
+const port = process.env.PORT  || 4000;
 
 app.listen(port, () => { console.log(`Server is running on port no ${port}`) })
